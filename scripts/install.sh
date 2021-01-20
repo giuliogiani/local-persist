@@ -23,8 +23,8 @@ function setenv {
     if [[ $OS == "linux" ]]; then
         case $ARCH in
             "x86_64")
-                ARCH="amd64"
-                SUPPORTED=true
+                # ARCH="amd64"
+                SUPPORTED=false
             ;;
             "i686")
                 # ARCH="386"
@@ -32,8 +32,8 @@ function setenv {
             ;;
             # untested
             arm*)
-                # ARCH="arm"
-                SUPPORTED=false
+                ARCH="arm"
+                SUPPORTED=true
             ;;
         esac
     elif [[ $OS == 'freebsd' ]]; then
